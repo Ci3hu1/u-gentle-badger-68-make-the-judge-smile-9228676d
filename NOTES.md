@@ -16,7 +16,7 @@
 - Kit: fresh download 24 Nov 2026 ~04:59 WIB from https://make.fun/c/<slug>/kit (7,916,282 bytes; first attempt hit a transient 503 "database out of reach", retried after 6s)
 - main.py: pure stdlib, writes the line to /output/entry.txt, chmod 0644
 - Tests: `python3 -m unittest discover -s tests -v` — 2 tests, both pass (line gate + exact program output)
-- Kit check: see below
+- Kit check (`node cli/makefun.mjs check --repo ... --commit d06bcc3...`, 24 Nov ~05:07 WIB): 4 passed (competition_open, snapshot, license_osi, entrypoint), 1 failed — transcripts_present (no bundle yet; bundle is made at submit time by the top-level agent), 14 skipped, 5 checks deferred to submission (repo_public, repo_owner, repo_created_after_open, commit_in_repo, duplicate_snapshot). No local grade for this bounty — the server grades every entry.
 
 ## Status
 - Built 24 Nov 2026 ~05:05 WIB. NOT submitted — awaiting Joni's 'Setuju' on this exact entry.
