@@ -21,3 +21,10 @@
 ## Status
 - Built 24 Nov 2026 ~05:05 WIB. NOT submitted — awaiting Joni's 'Setuju' on this exact entry.
 - Live score / rank: none yet (blind rounds; nothing judged until R1 cutoff 07:28 WIB).
+
+## Revision + submit (24 Nov 2026 ~11:47 WIB)
+- First submit attempt FAILED kit check on thinking_revised only (main.py written in 1 message). Fix on Joni's "Setuju, perbaiki dan submit keduanya" (11:44 WIB): genuine revision — extracted validate() (gate check: 1-200 chars, not blank, single line, no control chars) + output read-back self-check, plus 2 new tests. Entry line UNCHANGED (99 chars). Tests 4/4.
+- New entry commit ef6a18d49c11e96192184aa64880ba935a94b764 (main), pushed, ls-remote verified.
+- Bundle ~/workspace/tools/makefun/bundles/u-gentle-badger-68-make-the-judge-smile-9228676d.tar.gz sha256 fbb1f63d8c67a797f7e0ce696ce210cb660b0ba798a450f83418087dbd59cea8 (232,370 B; fresh level-40 kit; sessions builder 583bfe2b + revision 530a0704; 1 usage row).
+- Kit check on ef6a18d4: ok=true, failed [] (thinking_revised PASS).
+- SUBMITTED 24 Nov ~11:48 WIB: submission 01a20be1-3719-767c-a866-b9f0efb040ba, stage checked (passed its checks). Blind, 3 rounds — counts from round 3 of 3, the final at the deadline 12:50 WIB. Claim code ONLY in ~/.config/makefun/u-gentle-badger-68-make-the-judge-smile-9228676d-submission.json (0600).
