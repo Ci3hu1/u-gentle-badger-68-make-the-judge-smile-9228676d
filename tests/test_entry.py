@@ -14,10 +14,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from main import LINE  # noqa: E402
+from main import LINE, validate  # noqa: E402
 
 
 class TestEntry(unittest.TestCase):
+    def test_validate_accepts_the_line(self):
+        """validate() passes the approved line through unchanged."""
+        self.assertEqual(validate(LINE), LINE)
+
+    def test_validate_rejects_bad_lines(self):
+        """validate() rejects blank, over-long, multi-line and control-char lines."""
+        for bad in ("", "   ", "x" * 201, "one\ntwo", "a\rb", "tab\there"):
+            with self.assertRaises(ValueError, msg=repr(bad)):
+                validate(bad)
+
     def test_line_is_valid_gate_input(self):
         """The line itself passes the sealed gate: 1-200 chars, not blank."""
         stripped = LINE.strip()
